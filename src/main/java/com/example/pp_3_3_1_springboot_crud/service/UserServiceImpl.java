@@ -18,7 +18,6 @@ public class UserServiceImpl implements UserService {
         this.repository = repository;
     }
 
-    @Transactional
     public void save (User user) {
         repository.save(user);
     }
@@ -41,10 +40,6 @@ public class UserServiceImpl implements UserService {
     @Transactional
     public void update(User updatedUser){
 
-//        User userToBeUpdated = get(id);
-//        userToBeUpdated.setName(updatedUser.getName());
-//        userToBeUpdated.setLastName(updatedUser.getLastName());
-//        userToBeUpdated.setEmail(updatedUser.getEmail());
         save(updatedUser);
     }
 
