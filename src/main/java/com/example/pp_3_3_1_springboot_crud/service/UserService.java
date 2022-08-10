@@ -9,6 +9,6 @@ public interface UserService {
     List<User> getAll ();
     User get(Long id);
     void delete(Long id);
-    void update(Long id, User updatedUser);
+    void update(User updatedUser);
     List<User> search(String keyword);
 }

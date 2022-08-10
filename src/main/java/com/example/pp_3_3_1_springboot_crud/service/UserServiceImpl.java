@@ -39,11 +39,13 @@ public class UserServiceImpl implements UserService {
     }
 
     @Transactional
-    public void update(Long id, User updatedUser){
-        User userToBeUpdated = get(id);
-        userToBeUpdated.setName(updatedUser.getName());
-        userToBeUpdated.setLastName(updatedUser.getLastName());
-        userToBeUpdated.setEmail(updatedUser.getEmail());
+    public void update(User updatedUser){
+
+//        User userToBeUpdated = get(id);
+//        userToBeUpdated.setName(updatedUser.getName());
+//        userToBeUpdated.setLastName(updatedUser.getLastName());
+//        userToBeUpdated.setEmail(updatedUser.getEmail());
+        save(updatedUser);
     }
 
     public List<User> search(String keyword) {
