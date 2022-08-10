@@ -23,17 +23,17 @@ public class UserServiceImpl implements UserService {
         repository.save(user);
     }
 
-    @Transactional
+
     public List<User> getAll () {
         return (List<User>) repository.findAll();
     }
 
-    @Transactional
+
     public User get(Long id) {
         return repository.findById(id).get();
     }
 
-    @Transactional
+
     public void delete(Long id) {
         repository.deleteById(id);
     }
@@ -46,7 +46,6 @@ public class UserServiceImpl implements UserService {
         userToBeUpdated.setEmail(updatedUser.getEmail());
     }
 
-    @Transactional
     public List<User> search(String keyword) {
         return repository.search(keyword);
     }
